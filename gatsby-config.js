@@ -4,7 +4,7 @@ module.exports = {
     title: `Jordan Craigen - Dev Portfolio`,
     author: `Jordan Craigen`,
     description: `A portfolio and blog site for software developer Jordan Craigen`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://jordancraigen.dev/`,
     social: {
       twitter: `gatsbyjs`,
     },
