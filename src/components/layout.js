@@ -1,7 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-
+import BackgroundSlider from "react-background-slider"
+import { bgImgArray } from "../utils/background-images"
 import { rhythm, scale } from "../utils/typography"
 
 class Layout extends React.Component {
@@ -55,6 +56,7 @@ class Layout extends React.Component {
     }
     return (
       <Wrapper>
+        <BackgroundSlider images={bgImgArray} duration={10} transition={2} />
         <div
           style={{
             marginLeft: `auto`,
