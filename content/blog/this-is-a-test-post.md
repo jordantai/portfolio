@@ -5,3 +5,7 @@ title: This is a test post
 description: Testing Netlify CMS and Gatsby
 ---
 Wow how easy was this!
+
+
+
+![](../assets/great.jpg)
