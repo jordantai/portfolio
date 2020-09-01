@@ -1,6 +1,6 @@
 backend:
-  name: jordantai
-  repo: portfolio
+  name: github
+  repo: jordantai/portfolio
 
 media_folder: content/assets
 public_folder: ../assets
