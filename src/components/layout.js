@@ -1,8 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+// import BackgroundImages from "./backgroundImages"
+// import BackgroundSlider from "gatsby-image-background-slider"
 import BackgroundSlider from "react-background-slider"
 import { bgImgArray } from "../utils/background-images"
+// import img from "../../content/assets/bgImg/arches.jpg"
 import { rhythm, scale } from "../utils/typography"
 
 class Layout extends React.Component {
@@ -56,6 +59,7 @@ class Layout extends React.Component {
     }
     return (
       <Wrapper>
+        {/* <BackgroundImages /> */}
         <BackgroundSlider images={bgImgArray} duration={10} transition={2} />
         <div
           style={{
@@ -65,7 +69,7 @@ class Layout extends React.Component {
             padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
           }}
         >
-          <header>{header}</header>
+          <MainHeader>{header}</MainHeader>
           <main>{children}</main>
         </div>
         <Footer>
@@ -80,6 +84,10 @@ class Layout extends React.Component {
 
 const Wrapper = styled.div`
   min-height: 100vh;
+`
+
+const MainHeader = styled.h1`
+  background: rgba(255, 255, 255, 0.8);
 `
 
 const Footer = styled.footer`
