@@ -1,5 +1,6 @@
 import React from "react"
 import { rhythm, scale } from "../utils/typography"
+import { GoMarkGithub } from "react-icons/go"
 import styled from "styled-components"
 
 const Intro = () => {
@@ -44,6 +45,7 @@ const Intro = () => {
         Developer Bootcamp and I am eager to hit the ground running and start a
         career in software development.
       </p>
+      <GoMarkGithub />
     </>
   )
 }
