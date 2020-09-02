@@ -1,10 +1,10 @@
-import arches from "../../content/assets/bgImg/arches.jpg"
-import beetham from "../../content/assets/bgImg/beetham.jpg"
-import chinaTown from "../../content/assets/bgImg/china-town.jpg"
-import deansgate from "../../content/assets/bgImg/deansgate.jpg"
-import nq from "../../content/assets/bgImg/nq.jpg"
-import street from "../../content/assets/bgImg/street.jpg"
-import townHall from "../../content/assets/bgImg/townhall.jpg"
+import arches from "../../content/assets/backgrounds/arches.jpg"
+import beetham from "../../content/assets/backgrounds/beetham.jpg"
+import chinaTown from "../../content/assets/backgrounds/china-town.jpg"
+import deansgate from "../../content/assets/backgrounds/deansgate.jpg"
+import nq from "../../content/assets/backgrounds/nq.jpg"
+import street from "../../content/assets/backgrounds/street.jpg"
+import townHall from "../../content/assets/backgrounds/townhall.jpg"
 
 export const bgImgArray = [
   arches,
