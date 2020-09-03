@@ -1,10 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import BackgroundSlider from "react-background-slider"
 import { bgImgArray } from "../utils/background-images"
 // import img from "../../content/assets/bgImg/arches.jpg"
 import { rhythm, scale } from "../utils/typography"
+import { zoomInLeft } from "react-animations"
 
 class Layout extends React.Component {
   render() {
@@ -88,11 +89,16 @@ const IntroWrapper = styled.div`
   min-height: 96vh;
 `
 
+const zoomInLeftAnimation = keyframes`${zoomInLeft} 0% {visibility: hidden} 100% {visibility: visible;}`
+
 const MainHeader = styled.h1`
   background: rgba(255, 255, 255, 0.8);
   width: 70%;
   border-radius: 1rem 1rem 1rem 0;
   text-align: center;
+  animation: 1s ${zoomInLeftAnimation};
+  visibility: hidden;
+  animation-fill-mode: forwards;
 `
 
 const Footer = styled.footer`
