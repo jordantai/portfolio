@@ -1,6 +1,6 @@
 import React from "react"
 import { rhythm, scale } from "../utils/typography"
-import { GoMarkGithub } from "react-icons/go"
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"
 import { zoomInRight, zoomInLeft, zoomInUp } from "react-animations"
 import styled, { keyframes, css } from "styled-components"
 
@@ -26,6 +26,24 @@ const AnimatedP = styled.p`
   visibility: hidden;
   animation-fill-mode: forwards;
   animation-delay: 5s;
+`
+
+const IconsWrapper = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+`
+const IconLink = ({ className, url, children }) => (
+  <a className={className} href={url}>
+    {children}
+  </a>
+)
+
+const StyledIconLink = styled(IconLink)`
+  color: white;
+  &:hover {
+    color: #419eda;
+  }
 `
 
 const Intro = () => {
@@ -64,9 +82,17 @@ const Intro = () => {
         Developer Bootcamp and I am eager to hit the ground running and start a
         career in software development.
       </AnimatedP>
-      <a href="https://github.com/jordantai">
-        <GoMarkGithub size={`3rem`} color={`white`} />
-      </a>
+      <IconsWrapper>
+        <StyledIconLink url="https://github.com/jordantai">
+          <FaGithub size={`3rem`} />
+        </StyledIconLink>
+        <StyledIconLink url="https://linkedin.com/in/jordan-craigen">
+          <FaLinkedin size={`3rem`} />
+        </StyledIconLink>
+        <StyledIconLink url="mailto:jordan@jordancraigen.dev">
+          <FaEnvelope size={`3.3rem`} />
+        </StyledIconLink>
+      </IconsWrapper>
     </>
   )
 }
