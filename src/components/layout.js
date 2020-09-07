@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled, { keyframes } from "styled-components"
+import "../styles/global.css"
 // import img from "../../content/assets/bgImg/arches.jpg"
 import { rhythm, scale } from "../utils/typography"
 import { zoomInLeft } from "react-animations"
@@ -92,7 +93,9 @@ const MainHeader = styled.h1`
   animation: 1s ${zoomInLeftAnimation};
   visibility: hidden;
   animation-fill-mode: forwards;
-  font-size: 3rem;
+  @media (max-device-width: 768px) {
+    margin-left: ${rhythm(0.7)};
+  }
 `
 
 const Footer = styled.footer`

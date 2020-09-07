@@ -31,6 +31,9 @@ const AnimatedP = styled.p`
   visibility: hidden;
   animation-fill-mode: forwards;
   animation-delay: 5s;
+  @media (max-device-width: 768px) {
+    margin: ${rhythm(0.3)};
+  }
 `
 
 const IconsWrapper = styled.div`
