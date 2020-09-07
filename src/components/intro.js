@@ -1,6 +1,11 @@
 import React from "react"
 import { rhythm, scale } from "../utils/typography"
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaHandPointDown,
+} from "react-icons/fa"
 import { zoomInRight, zoomInLeft, zoomInUp } from "react-animations"
 import styled, { keyframes, css } from "styled-components"
 
@@ -45,6 +50,21 @@ const StyledIconLink = styled(IconLink)`
     color: #419eda;
   }
 `
+const WorkLinkWrapper = styled.div`
+  text-align: center;
+  margin-top: ${rhythm(1)};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+const WorkTitle = styled.h2`
+  color: white;
+  background-color: #419eda;
+  opacity: 0.8;
+  padding: ${rhythm(0.5)};
+  border-radius: 4rem;
+`
 
 const Intro = () => {
   return (
@@ -58,7 +78,7 @@ const Intro = () => {
           marginLeft: rhythm(1),
         }}
       >
-        A Software Developer
+        A Full Stack Developer
       </AnimatedHeader>
       <AnimatedHeader
         style={{
@@ -93,6 +113,12 @@ const Intro = () => {
           <FaEnvelope size={`3.3rem`} />
         </StyledIconLink>
       </IconsWrapper>
+      <WorkLinkWrapper>
+        <WorkTitle>My Work</WorkTitle>
+        <StyledIconLink url="#work">
+          <FaHandPointDown size={`3rem`} />
+        </StyledIconLink>
+      </WorkLinkWrapper>
     </>
   )
 }
