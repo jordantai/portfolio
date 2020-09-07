@@ -1,8 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
-import styled from "styled-components"
-
+import styled, { keyframes } from "styled-components"
+import "../styles/global.css"
+// import img from "../../content/assets/bgImg/arches.jpg"
 import { rhythm, scale } from "../utils/typography"
+import { zoomInLeft } from "react-animations"
 
 class Layout extends React.Component {
   render() {
@@ -12,11 +14,11 @@ class Layout extends React.Component {
     let header
 
     if (location.pathname === rootPath || location.pathname === blogPath) {
+      // home and blog
       header = (
         <h1
           style={{
             ...scale(1.5),
-            marginBottom: rhythm(1.5),
             marginTop: 0,
           }}
         >
@@ -33,6 +35,7 @@ class Layout extends React.Component {
         </h1>
       )
     } else {
+      // Article header
       header = (
         <h3
           style={{
@@ -60,12 +63,12 @@ class Layout extends React.Component {
             marginLeft: `auto`,
             marginRight: `auto`,
             maxWidth: rhythm(24),
-            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+            paddingTop: `${rhythm(1)}`,
           }}
         >
-          <header>{header}</header>
-          <main>{children}</main>
+          <MainHeader>{header}</MainHeader>
         </div>
+        <main>{children}</main>
         <Footer>
           © {new Date().getFullYear()}, Built with
           {` `}
@@ -80,9 +83,26 @@ const Wrapper = styled.div`
   min-height: 100vh;
 `
 
-const Footer = styled.footer`
+const zoomInLeftAnimation = keyframes`${zoomInLeft} 0% {visibility: hidden} 100% {visibility: visible;}`
+
+const MainHeader = styled.h1`
+  background: rgba(255, 255, 255, 0.8);
+  width: 70%;
+  border-radius: 1rem 1rem 1rem 0;
   text-align: center;
-  margin: 24px;
+  animation: 1s ${zoomInLeftAnimation};
+  visibility: hidden;
+  animation-fill-mode: forwards;
+  @media (max-device-width: 768px) {
+    margin-left: ${rhythm(0.7)};
+  }
+`
+
+const Footer = styled.footer`
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  background-color: red;
 `
 
 export default Layout
