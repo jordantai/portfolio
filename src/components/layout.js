@@ -1,8 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled, { keyframes } from "styled-components"
-import BackgroundSlider from "react-background-slider"
-import { bgImgArray } from "../utils/background-images"
 // import img from "../../content/assets/bgImg/arches.jpg"
 import { rhythm, scale } from "../utils/typography"
 import { zoomInLeft } from "react-animations"
@@ -15,6 +13,7 @@ class Layout extends React.Component {
     let header
 
     if (location.pathname === rootPath || location.pathname === blogPath) {
+      // home and blog
       header = (
         <h1
           style={{
@@ -35,6 +34,7 @@ class Layout extends React.Component {
         </h1>
       )
     } else {
+      // Article header
       header = (
         <h3
           style={{
@@ -57,20 +57,17 @@ class Layout extends React.Component {
     }
     return (
       <Wrapper>
-        <IntroWrapper>
-          <BackgroundSlider images={bgImgArray} duration={10} transition={2} />
-          <div
-            style={{
-              marginLeft: `auto`,
-              marginRight: `auto`,
-              maxWidth: rhythm(24),
-              padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-            }}
-          >
-            <MainHeader>{header}</MainHeader>
-            <main>{children}</main>
-          </div>
-        </IntroWrapper>
+        <div
+          style={{
+            marginLeft: `auto`,
+            marginRight: `auto`,
+            maxWidth: rhythm(24),
+            paddingTop: `${rhythm(1)}`,
+          }}
+        >
+          <MainHeader>{header}</MainHeader>
+        </div>
+        <main>{children}</main>
         <Footer>
           © {new Date().getFullYear()}, Built with
           {` `}
@@ -85,10 +82,6 @@ const Wrapper = styled.div`
   min-height: 100vh;
 `
 
-const IntroWrapper = styled.div`
-  min-height: 96vh;
-`
-
 const zoomInLeftAnimation = keyframes`${zoomInLeft} 0% {visibility: hidden} 100% {visibility: visible;}`
 
 const MainHeader = styled.h1`
@@ -99,6 +92,7 @@ const MainHeader = styled.h1`
   animation: 1s ${zoomInLeftAnimation};
   visibility: hidden;
   animation-fill-mode: forwards;
+  font-size: 3rem;
 `
 
 const Footer = styled.footer`
