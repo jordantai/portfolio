@@ -6,6 +6,21 @@ import crimeStatsImg from "../../content/assets/crime-stats-mcr.png"
 import chickenTinderImg from "../../content/assets/chicken-tinder.png"
 import smanImg from "../../content/assets/sman.png"
 import KMAshworthImg from "../../content/assets/km-ashworth.png"
+import {
+  SiTypescript,
+  SiReact,
+  SiHtml5,
+  SiStyledComponents,
+  SiNodeDotJs,
+  SiCss3,
+  SiJavascript,
+  SiMaterialUi,
+  SiGraphql,
+  SiApollographql,
+  SiFirebase,
+  SiMongodb,
+  SiPostgresql,
+} from "react-icons/si"
 
 const ProjectsWrapper = styled.div`
   display: grid;
@@ -17,14 +32,16 @@ const ProjectsWrapper = styled.div`
 const ProjectBox = styled.div`
   position: relative;
   border-radius: 2px;
-  min-height: 10rem;
+  min-height: 15rem;
   box-shadow: 5px 5px 9px -2px rgba(0, 0, 0, 0.75);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   &::before {
     content: "";
     background-size: cover;
+    background-repeat: no-repeat;
     position: absolute;
     top: 0px;
     right: 0px;
@@ -35,6 +52,22 @@ const ProjectBox = styled.div`
   &:hover {
     &::before {
       opacity: 1;
+    }
+    h3 {
+      background-color: rgba(65, 158, 218, 1);
+      color: white;
+    }
+    h5,
+    svg,
+    div {
+      color: white;
+      background-color: rgba(65, 158, 218, 1);
+    }
+  }
+  h3 {
+    &:hover {
+      background-color: rgba(65, 158, 218, 1);
+      color: white;
     }
   }
 `
@@ -62,13 +95,45 @@ const ProjectKMAshworth = styled(ProjectBox)`
   }
 `
 
+const ProjectInfoWrapper = styled.div`
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 1;
+  text-align: center;
+  border-radius: 2px;
+`
+
 const ProjectTitle = styled.h3`
   z-index: 1;
-  background-color: rgba(65, 158, 218, 0.8);
+  /* background-color: rgba(65, 158, 218, 0.8);
+  background-color: rgba(255, 255, 255, 0.9); */
   padding: ${rhythm(1)};
+  padding-bottom: ${rhythm(0.5)};
   margin-bottom: 0;
-  border-radius: 2px;
-  color: white;
+  color: black;
+`
+
+const TechTitle = styled.h5`
+  z-index: 1;
+  margin-bottom: ${rhythm(0.2)};
+`
+
+const TechInfo = ({ className, children }) => (
+  <div className={className}>{children}</div>
+)
+
+const ProjectTech = styled(TechInfo)`
+  z-index: 1;
+  display: flex;
+  color: black;
+  justify-content: center;
+  margin-bottom: ${rhythm(0.4)};
+  &:hover {
+    z-index: 1;
+  }
+  svg {
+    margin: 2px;
+  }
 `
 
 const Work = () => {
@@ -76,19 +141,71 @@ const Work = () => {
     <>
       <h2>My Work</h2>
       <ProjectsWrapper>
-        <ProjectCrimeStats>
-          <ProjectTitle>Crime Stats MCR</ProjectTitle>
-          <h5>Tech</h5>
-        </ProjectCrimeStats>
-        <ProjectChickenTinder>
-          <ProjectTitle>Chicken Tinder</ProjectTitle>
-        </ProjectChickenTinder>
-        <ProjectSMAN>
-          <ProjectTitle>Super Mega Awesome News</ProjectTitle>
-        </ProjectSMAN>
-        <ProjectKMAshworth>
-          <ProjectTitle>KM Ashworth Interiors</ProjectTitle>
-        </ProjectKMAshworth>
+        <Link to="" style={{ textDecoration: `none` }}>
+          <ProjectCrimeStats>
+            <ProjectInfoWrapper>
+              <ProjectTitle>Crime Stats MCR</ProjectTitle>
+              <TechTitle>Tech</TechTitle>
+              <ProjectTech>
+                <SiTypescript />
+                <SiReact />
+                <SiNodeDotJs />
+                <SiHtml5 />
+                <SiStyledComponents />
+                <SiCss3 />
+              </ProjectTech>
+            </ProjectInfoWrapper>
+          </ProjectCrimeStats>
+        </Link>
+        <Link to="" style={{ textDecoration: `none` }}>
+          <ProjectChickenTinder>
+            <ProjectInfoWrapper>
+              <ProjectTitle>Chicken Tinder</ProjectTitle>
+              <TechTitle>Tech</TechTitle>
+              <TechTitle>Front End</TechTitle>
+              <ProjectTech>
+                <SiJavascript />
+                <SiReact />
+                <SiApollographql />
+                <SiFirebase />
+                <SiMaterialUi />
+              </ProjectTech>
+              <TechTitle>Back End</TechTitle>
+              <ProjectTech>
+                <SiJavascript />
+                <SiNodeDotJs />
+                <SiMongodb />
+                <SiGraphql />
+              </ProjectTech>
+            </ProjectInfoWrapper>
+          </ProjectChickenTinder>
+        </Link>
+        <Link to="" style={{ textDecoration: `none` }}>
+          <ProjectSMAN>
+            <ProjectInfoWrapper>
+              <ProjectTitle>Super Mega Awesome News</ProjectTitle>
+              <TechTitle>Tech</TechTitle>
+              <TechTitle>Front End</TechTitle>
+              <ProjectTech>
+                <SiJavascript />
+                <SiReact />
+                <SiHtml5 />
+                <SiCss3 />
+              </ProjectTech>
+              <TechTitle>Back End</TechTitle>
+              <ProjectTech>
+                <SiJavascript />
+                <SiNodeDotJs />
+                <SiPostgresql />
+              </ProjectTech>
+            </ProjectInfoWrapper>
+          </ProjectSMAN>
+        </Link>
+        <Link to="" style={{ textDecoration: `none` }}>
+          <ProjectKMAshworth>
+            <ProjectTitle>KM Ashworth Interiors</ProjectTitle>
+          </ProjectKMAshworth>
+        </Link>
       </ProjectsWrapper>
     </>
   )
