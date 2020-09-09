@@ -8,6 +8,7 @@ import Button from "../components/button"
 import Intro from "../components/intro"
 import BackgroundSlider from "react-background-slider"
 import { bgImgArray } from "../utils/background-images"
+import Work from "../components/work"
 
 class IndexPage extends React.Component {
   render() {
@@ -27,7 +28,9 @@ class IndexPage extends React.Component {
           <BackgroundSlider images={bgImgArray} duration={10} transition={2} />
           <Intro />
         </IntroWrapper>
-        <WorkWrapper></WorkWrapper>
+        <WorkWrapper>
+          <Work />
+        </WorkWrapper>
       </Layout>
     )
   }
@@ -42,7 +45,7 @@ const IntroWrapper = styled.div`
 const WorkWrapper = styled.div`
   width: 100%;
   min-height: 200px;
-  background-color: grey;
+  background-color: white;
 `
 
 export default IndexPage
