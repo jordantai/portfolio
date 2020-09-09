@@ -45,7 +45,7 @@ const IntroWrapper = styled.div`
 const WorkWrapper = styled.div`
   width: 100%;
   min-height: 200px;
-  background-color: grey;
+  background-color: white;
 `
 
 export default IndexPage

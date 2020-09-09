@@ -32,6 +32,7 @@ import {
   SiGrunt,
   SiGulp,
   SiGatsby,
+  SiGithub,
 } from "react-icons/si"
 import { MdDevices } from "react-icons/md"
 
@@ -145,36 +146,34 @@ const ProjectTech = styled(TechInfo)`
   z-index: 1;
   display: flex;
   color: black;
-  justify-content: center;
+  justify-content: space-evenly;
   margin-bottom: ${rhythm(0.4)};
   &:hover {
     z-index: 1;
   }
-  svg {
-    margin: 2px;
-  }
 `
 
-const SiteLinks = ({ className, children }) => (
-  <div className={className}>{children}</div>
-)
-
-const StyledSiteLinks = styled(SiteLinks)`
-  z-index: 1;
-  display: flex;
-  align-items: center;
-`
-
-const Live = ({ className, children, url }) => (
+const ExternalLink = ({ className, children, url }) => (
   <a className={className} href={url}>
     {children}
   </a>
 )
 
+const StyledExternalLink = styled(ExternalLink)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    margin-right: 5px;
+  }
+`
+
 const Work = () => {
   return (
     <>
-      <h2>My Work</h2>
+      <h2 id="work" style={{ textAlign: `center`, paddingTop: `${rhythm(1)}` }}>
+        Projects
+      </h2>
       <ProjectsWrapper>
         <ProjectPortfolio>
           <ProjectInfoWrapper>
@@ -194,6 +193,12 @@ const Work = () => {
               <SiStyledComponents />
               <SiCss3 />
               <SiGraphql />
+            </ProjectTech>
+            <ProjectTech>
+              <StyledExternalLink url="https://github.com/jordantai/portfolio">
+                <SiGithub />
+                Repo
+              </StyledExternalLink>
             </ProjectTech>
           </ProjectInfoWrapper>
         </ProjectPortfolio>
@@ -215,13 +220,17 @@ const Work = () => {
               <SiStyledComponents />
               <SiCss3 />
             </ProjectTech>
+            <ProjectTech>
+              <StyledExternalLink url="https://crime-stats-mcr.netlify.app/">
+                <MdDevices />
+                Live site
+              </StyledExternalLink>
+              <StyledExternalLink url="https://github.com/jordantai/crime-stats">
+                <SiGithub />
+                Repo
+              </StyledExternalLink>
+            </ProjectTech>
           </ProjectInfoWrapper>
-          <StyledSiteLinks>
-            <Live url="https://crime-stats-mcr.netlify.app/">
-              <MdDevices />
-              Live site
-            </Live>
-          </StyledSiteLinks>
         </ProjectCrimeStats>
 
         <ProjectChickenTinder>
@@ -248,6 +257,20 @@ const Work = () => {
               <SiMongodb />
               <SiGraphql />
             </ProjectTech>
+            <ProjectTech>
+              <StyledExternalLink url="https://chicken-tinder-nc.netlify.app/">
+                <MdDevices />
+                Live site
+              </StyledExternalLink>
+              <StyledExternalLink url="https://github.com/jordantai/ChickenTinderFrontend/">
+                <SiGithub />
+                FE repo
+              </StyledExternalLink>
+              <StyledExternalLink url="https://github.com/jordantai/ChickenTinderBackend/">
+                <SiGithub />
+                BE repo
+              </StyledExternalLink>
+            </ProjectTech>
           </ProjectInfoWrapper>
         </ProjectChickenTinder>
 
@@ -269,6 +292,20 @@ const Work = () => {
               <SiJavascript />
               <SiNodeDotJs />
               <SiPostgresql />
+            </ProjectTech>
+            <ProjectTech>
+              <StyledExternalLink url="https://super-mega-awesome-news.netlify.app/">
+                <MdDevices />
+                Live site
+              </StyledExternalLink>
+              <StyledExternalLink url="https://github.com/jordantai/super-mega-awesome-news/">
+                <SiGithub />
+                FE repo
+              </StyledExternalLink>
+              <StyledExternalLink url="https://github.com/jordantai/be-nc-news/">
+                <SiGithub />
+                BE repo
+              </StyledExternalLink>
             </ProjectTech>
           </ProjectInfoWrapper>
         </ProjectSMAN>
@@ -292,6 +329,12 @@ const Work = () => {
               <SiComposer />
               <SiGulp />
             </ProjectTech>
+            <ProjectTech>
+              <StyledExternalLink url="https://kmashworth.co.uk/">
+                <MdDevices />
+                Live site
+              </StyledExternalLink>
+            </ProjectTech>
           </ProjectInfoWrapper>
         </ProjectKMAshworth>
 
@@ -309,6 +352,12 @@ const Work = () => {
               <SiSass />
               <SiBootstrap />
               <SiGrunt />
+            </ProjectTech>
+            <ProjectTech>
+              <StyledExternalLink url="https://asupholstery.co.uk/">
+                <MdDevices />
+                Live site
+              </StyledExternalLink>
             </ProjectTech>
           </ProjectInfoWrapper>
         </ProjectASUpholstery>
