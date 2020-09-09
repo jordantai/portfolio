@@ -9,6 +9,7 @@ import Intro from "../components/intro"
 import BackgroundSlider from "react-background-slider"
 import { bgImgArray } from "../utils/background-images"
 import Work from "../components/work"
+import Skills from "../components/skills"
 
 class IndexPage extends React.Component {
   render() {
@@ -31,6 +32,9 @@ class IndexPage extends React.Component {
         <WorkWrapper>
           <Work />
         </WorkWrapper>
+        <SkillsWrapper>
+          <Skills />
+        </SkillsWrapper>
       </Layout>
     )
   }
@@ -47,6 +51,13 @@ const WorkWrapper = styled.div`
   width: 100%;
   min-height: 200px;
   background-color: white;
+  padding-bottom: 1rem;
+`
+
+const SkillsWrapper = styled.section`
+  width: 100%;
+  min-height: 200px;
+  background-color: lightcoral;
 `
 
 export default IndexPage
