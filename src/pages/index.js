@@ -40,6 +40,7 @@ const IntroWrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   max-width: ${rhythm(24)};
+  min-height: 100vh;
 `
 
 const WorkWrapper = styled.div`
