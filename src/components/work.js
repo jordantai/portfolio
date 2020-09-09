@@ -68,21 +68,16 @@ const ProjectBox = styled.div`
     &::before {
       opacity: 1;
     }
-    h3 {
-      background-color: rgba(65, 158, 218, 1);
-      color: white;
-    }
-    h5,
-    svg,
     div {
-      color: white;
-      background-color: rgba(65, 158, 218, 1);
+      background-color: white;
     }
   }
   h3 {
     &:hover {
       background-color: rgba(65, 158, 218, 1);
       color: white;
+      outline: 4px solid #2a6496;
+      outline-offset: -4px;
     }
   }
 `
@@ -132,10 +127,7 @@ const ProjectInfoWrapper = styled.div`
 
 const ProjectTitle = styled.h3`
   z-index: 1;
-  /* background-color: rgba(65, 158, 218, 0.8);
-  background-color: rgba(255, 255, 255, 0.9); */
   padding: ${rhythm(1)};
-  padding-bottom: ${rhythm(0.5)};
   margin-bottom: 0;
   color: black;
 `
@@ -163,132 +155,163 @@ const ProjectTech = styled(TechInfo)`
   }
 `
 
+const SiteLinks = ({ className, children }) => (
+  <div className={className}>{children}</div>
+)
+
+const StyledSiteLinks = styled(SiteLinks)`
+  z-index: 1;
+  display: flex;
+  align-items: center;
+`
+
+const Live = ({ className, children, url }) => (
+  <a className={className} href={url}>
+    {children}
+  </a>
+)
+
 const Work = () => {
   return (
     <>
       <h2>My Work</h2>
       <ProjectsWrapper>
-        <Link to={`${blogPath}portfolio/`} style={{ textDecoration: `none` }}>
-          <ProjectPortfolio>
-            <ProjectInfoWrapper>
+        <ProjectPortfolio>
+          <ProjectInfoWrapper>
+            <Link
+              to={`${blogPath}portfolio/`}
+              style={{ textDecoration: `none` }}
+            >
               <ProjectTitle>This Portfolio</ProjectTitle>
-              <TechTitle>Tech</TechTitle>
-              <ProjectTech>
-                <SiJavascript />
-                <SiGatsby />
-                <SiReact />
-                <SiNodeDotJs />
-                <SiHtml5 />
-                <SiStyledComponents />
-                <SiCss3 />
-                <SiGraphql />
-              </ProjectTech>
-            </ProjectInfoWrapper>
-          </ProjectPortfolio>
-        </Link>
-        <Link
-          to={`${blogPath}crime-stats-mcr/`}
-          style={{ textDecoration: `none` }}
-        >
-          <ProjectCrimeStats>
-            <ProjectInfoWrapper>
+            </Link>
+            <TechTitle>Tech</TechTitle>
+            <ProjectTech>
+              <SiJavascript />
+              <SiGatsby />
+              <SiReact />
+              <SiNodeDotJs />
+              <SiHtml5 />
+              <SiStyledComponents />
+              <SiCss3 />
+              <SiGraphql />
+            </ProjectTech>
+          </ProjectInfoWrapper>
+        </ProjectPortfolio>
+
+        <ProjectCrimeStats>
+          <ProjectInfoWrapper>
+            <Link
+              to={`${blogPath}crime-stats-mcr/`}
+              style={{ textDecoration: `none` }}
+            >
               <ProjectTitle>Crime Stats MCR</ProjectTitle>
-              <TechTitle>Tech</TechTitle>
-              <ProjectTech>
-                <SiTypescript />
-                <SiReact />
-                <SiNodeDotJs />
-                <SiHtml5 />
-                <SiStyledComponents />
-                <SiCss3 />
-              </ProjectTech>
-            </ProjectInfoWrapper>
-            <MdDevices />
-            <a href="https://crime-stats-mcr.netlify.app/">Live site</a>
-          </ProjectCrimeStats>
-        </Link>
-        <Link
-          to={`${blogPath}chicken-tinder/`}
-          style={{ textDecoration: `none` }}
-        >
-          <ProjectChickenTinder>
-            <ProjectInfoWrapper>
+            </Link>
+            <TechTitle>Tech</TechTitle>
+            <ProjectTech>
+              <SiTypescript />
+              <SiReact />
+              <SiNodeDotJs />
+              <SiHtml5 />
+              <SiStyledComponents />
+              <SiCss3 />
+            </ProjectTech>
+          </ProjectInfoWrapper>
+          <StyledSiteLinks>
+            <Live url="https://crime-stats-mcr.netlify.app/">
+              <MdDevices />
+              Live site
+            </Live>
+          </StyledSiteLinks>
+        </ProjectCrimeStats>
+
+        <ProjectChickenTinder>
+          <ProjectInfoWrapper>
+            <Link
+              to={`${blogPath}chicken-tinder/`}
+              style={{ textDecoration: `none` }}
+            >
               <ProjectTitle>Chicken Tinder</ProjectTitle>
-              <TechTitle>Tech</TechTitle>
-              <TechTitle>Front End</TechTitle>
-              <ProjectTech>
-                <SiJavascript />
-                <SiReact />
-                <SiApollographql />
-                <SiFirebase />
-                <SiMaterialUi />
-              </ProjectTech>
-              <TechTitle>Back End</TechTitle>
-              <ProjectTech>
-                <SiJavascript />
-                <SiNodeDotJs />
-                <SiMongodb />
-                <SiGraphql />
-              </ProjectTech>
-            </ProjectInfoWrapper>
-          </ProjectChickenTinder>
-        </Link>
-        <Link to={`${blogPath}sman/`} style={{ textDecoration: `none` }}>
-          <ProjectSMAN>
-            <ProjectInfoWrapper>
+            </Link>
+            <TechTitle>Tech</TechTitle>
+            <TechTitle>Front End</TechTitle>
+            <ProjectTech>
+              <SiJavascript />
+              <SiReact />
+              <SiApollographql />
+              <SiFirebase />
+              <SiMaterialUi />
+            </ProjectTech>
+            <TechTitle>Back End</TechTitle>
+            <ProjectTech>
+              <SiJavascript />
+              <SiNodeDotJs />
+              <SiMongodb />
+              <SiGraphql />
+            </ProjectTech>
+          </ProjectInfoWrapper>
+        </ProjectChickenTinder>
+
+        <ProjectSMAN>
+          <ProjectInfoWrapper>
+            <Link to={`${blogPath}sman/`} style={{ textDecoration: `none` }}>
               <ProjectTitle>Super Mega Awesome News</ProjectTitle>
-              <TechTitle>Tech</TechTitle>
-              <TechTitle>Front End</TechTitle>
-              <ProjectTech>
-                <SiJavascript />
-                <SiReact />
-                <SiHtml5 />
-                <SiCss3 />
-              </ProjectTech>
-              <TechTitle>Back End</TechTitle>
-              <ProjectTech>
-                <SiJavascript />
-                <SiNodeDotJs />
-                <SiPostgresql />
-              </ProjectTech>
-            </ProjectInfoWrapper>
-          </ProjectSMAN>
-        </Link>
-        <Link to={`${blogPath}km-ashworth/`} style={{ textDecoration: `none` }}>
-          <ProjectKMAshworth>
-            <ProjectInfoWrapper>
+            </Link>
+            <TechTitle>Tech</TechTitle>
+            <TechTitle>Front End</TechTitle>
+            <ProjectTech>
+              <SiJavascript />
+              <SiReact />
+              <SiHtml5 />
+              <SiCss3 />
+            </ProjectTech>
+            <TechTitle>Back End</TechTitle>
+            <ProjectTech>
+              <SiJavascript />
+              <SiNodeDotJs />
+              <SiPostgresql />
+            </ProjectTech>
+          </ProjectInfoWrapper>
+        </ProjectSMAN>
+
+        <ProjectKMAshworth>
+          <ProjectInfoWrapper>
+            <Link
+              to={`${blogPath}km-ashworth/`}
+              style={{ textDecoration: `none` }}
+            >
               <ProjectTitle>KM Ashworth Interiors</ProjectTitle>
-              <TechTitle>Tech</TechTitle>
-              <ProjectTech>
-                <SiWordpress />
-                <SiSass />
-                <SiBootstrap />
-                <SiAnsible />
-                <SiVagrant />
-                <SiMariadb />
-                <SiComposer />
-                <SiGulp />
-              </ProjectTech>
-            </ProjectInfoWrapper>
-          </ProjectKMAshworth>
-        </Link>
-        <Link
-          to={`${blogPath}asupholstery/`}
-          style={{ textDecoration: `none` }}
-        >
-          <ProjectASUpholstery>
-            <ProjectInfoWrapper>
+            </Link>
+            <TechTitle>Tech</TechTitle>
+            <ProjectTech>
+              <SiWordpress />
+              <SiSass />
+              <SiBootstrap />
+              <SiAnsible />
+              <SiVagrant />
+              <SiMariadb />
+              <SiComposer />
+              <SiGulp />
+            </ProjectTech>
+          </ProjectInfoWrapper>
+        </ProjectKMAshworth>
+
+        <ProjectASUpholstery>
+          <ProjectInfoWrapper>
+            <Link
+              to={`${blogPath}asupholstery/`}
+              style={{ textDecoration: `none` }}
+            >
               <ProjectTitle>AS Upholstery</ProjectTitle>
-              <TechTitle>Tech</TechTitle>
-              <ProjectTech>
-                <SiWordpress />
-                <SiSass />
-                <SiBootstrap />
-                <SiGrunt />
-              </ProjectTech>
-            </ProjectInfoWrapper>
-          </ProjectASUpholstery>
-        </Link>
+            </Link>
+            <TechTitle>Tech</TechTitle>
+            <ProjectTech>
+              <SiWordpress />
+              <SiSass />
+              <SiBootstrap />
+              <SiGrunt />
+            </ProjectTech>
+          </ProjectInfoWrapper>
+        </ProjectASUpholstery>
       </ProjectsWrapper>
     </>
   )
