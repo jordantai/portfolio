@@ -6,6 +6,8 @@ import crimeStatsImg from "../../content/assets/crime-stats-mcr.png"
 import chickenTinderImg from "../../content/assets/chicken-tinder.png"
 import smanImg from "../../content/assets/sman.png"
 import KMAshworthImg from "../../content/assets/km-ashworth.png"
+import ASUpholsteryImg from "../../content/assets/asupholstery.png"
+import portfolioImg from "../../content/assets/portfolio.png"
 import {
   SiTypescript,
   SiReact,
@@ -20,7 +22,20 @@ import {
   SiFirebase,
   SiMongodb,
   SiPostgresql,
+  SiWordpress,
+  SiSass,
+  SiBootstrap,
+  SiAnsible,
+  SiVagrant,
+  SiMariadb,
+  SiComposer,
+  SiGrunt,
+  SiGulp,
+  SiGatsby,
 } from "react-icons/si"
+import { MdDevices } from "react-icons/md"
+
+const blogPath = `${__PATH_PREFIX__}/blog/`
 
 const ProjectsWrapper = styled.div`
   display: grid;
@@ -71,6 +86,12 @@ const ProjectBox = styled.div`
     }
   }
 `
+const ProjectPortfolio = styled(ProjectBox)`
+  &::before {
+    background-image: url(${portfolioImg});
+  }
+`
+
 const ProjectCrimeStats = styled(ProjectBox)`
   &::before {
     background-image: url(${crimeStatsImg});
@@ -92,6 +113,12 @@ const ProjectSMAN = styled(ProjectBox)`
 const ProjectKMAshworth = styled(ProjectBox)`
   &::before {
     background-image: url(${KMAshworthImg});
+  }
+`
+
+const ProjectASUpholstery = styled(ProjectBox)`
+  &::before {
+    background-image: url(${ASUpholsteryImg});
   }
 `
 
@@ -141,7 +168,28 @@ const Work = () => {
     <>
       <h2>My Work</h2>
       <ProjectsWrapper>
-        <Link to="" style={{ textDecoration: `none` }}>
+        <Link to={`${blogPath}portfolio/`} style={{ textDecoration: `none` }}>
+          <ProjectPortfolio>
+            <ProjectInfoWrapper>
+              <ProjectTitle>This Portfolio</ProjectTitle>
+              <TechTitle>Tech</TechTitle>
+              <ProjectTech>
+                <SiJavascript />
+                <SiGatsby />
+                <SiReact />
+                <SiNodeDotJs />
+                <SiHtml5 />
+                <SiStyledComponents />
+                <SiCss3 />
+                <SiGraphql />
+              </ProjectTech>
+            </ProjectInfoWrapper>
+          </ProjectPortfolio>
+        </Link>
+        <Link
+          to={`${blogPath}crime-stats-mcr/`}
+          style={{ textDecoration: `none` }}
+        >
           <ProjectCrimeStats>
             <ProjectInfoWrapper>
               <ProjectTitle>Crime Stats MCR</ProjectTitle>
@@ -155,9 +203,14 @@ const Work = () => {
                 <SiCss3 />
               </ProjectTech>
             </ProjectInfoWrapper>
+            <MdDevices />
+            <a href="https://crime-stats-mcr.netlify.app/">Live site</a>
           </ProjectCrimeStats>
         </Link>
-        <Link to="" style={{ textDecoration: `none` }}>
+        <Link
+          to={`${blogPath}chicken-tinder/`}
+          style={{ textDecoration: `none` }}
+        >
           <ProjectChickenTinder>
             <ProjectInfoWrapper>
               <ProjectTitle>Chicken Tinder</ProjectTitle>
@@ -180,7 +233,7 @@ const Work = () => {
             </ProjectInfoWrapper>
           </ProjectChickenTinder>
         </Link>
-        <Link to="" style={{ textDecoration: `none` }}>
+        <Link to={`${blogPath}sman/`} style={{ textDecoration: `none` }}>
           <ProjectSMAN>
             <ProjectInfoWrapper>
               <ProjectTitle>Super Mega Awesome News</ProjectTitle>
@@ -201,10 +254,40 @@ const Work = () => {
             </ProjectInfoWrapper>
           </ProjectSMAN>
         </Link>
-        <Link to="" style={{ textDecoration: `none` }}>
+        <Link to={`${blogPath}km-ashworth/`} style={{ textDecoration: `none` }}>
           <ProjectKMAshworth>
-            <ProjectTitle>KM Ashworth Interiors</ProjectTitle>
+            <ProjectInfoWrapper>
+              <ProjectTitle>KM Ashworth Interiors</ProjectTitle>
+              <TechTitle>Tech</TechTitle>
+              <ProjectTech>
+                <SiWordpress />
+                <SiSass />
+                <SiBootstrap />
+                <SiAnsible />
+                <SiVagrant />
+                <SiMariadb />
+                <SiComposer />
+                <SiGulp />
+              </ProjectTech>
+            </ProjectInfoWrapper>
           </ProjectKMAshworth>
+        </Link>
+        <Link
+          to={`${blogPath}asupholstery/`}
+          style={{ textDecoration: `none` }}
+        >
+          <ProjectASUpholstery>
+            <ProjectInfoWrapper>
+              <ProjectTitle>AS Upholstery</ProjectTitle>
+              <TechTitle>Tech</TechTitle>
+              <ProjectTech>
+                <SiWordpress />
+                <SiSass />
+                <SiBootstrap />
+                <SiGrunt />
+              </ProjectTech>
+            </ProjectInfoWrapper>
+          </ProjectASUpholstery>
         </Link>
       </ProjectsWrapper>
     </>
