@@ -10,6 +10,7 @@ import BackgroundSlider from "react-background-slider"
 import { bgImgArray } from "../utils/background-images"
 import Work from "../components/work"
 import Skills from "../components/skills"
+import BlogSection from "../components/blogSection"
 
 class IndexPage extends React.Component {
   render() {
@@ -35,6 +36,9 @@ class IndexPage extends React.Component {
         <SkillsWrapper>
           <Skills />
         </SkillsWrapper>
+        <BlogWrapper>
+          <BlogSection />
+        </BlogWrapper>
       </Layout>
     )
   }
@@ -69,6 +73,12 @@ const SkillsWrapper = styled.section`
   h3 {
     padding-top: ${rhythm(1.5)};
   }
+`
+
+const BlogWrapper = styled.section`
+  width: 100%;
+  min-height: 200px;
+  background-color: #34404d;
 `
 
 export default IndexPage

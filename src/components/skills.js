@@ -25,6 +25,7 @@ const ListWrapper = styled.ul`
   display: flex;
   justify-content: space-evenly;
   color: white;
+  margin: 0;
   li {
     display: flex;
     align-items: center;
@@ -42,7 +43,7 @@ const ListWrapper = styled.ul`
 const Skills = () => {
   return (
     <>
-      <h2>Skills</h2>
+      <h2 id="skills">Skills</h2>
       <h3>Languages</h3>
       <ListWrapper>
         <li>
