@@ -59,6 +59,7 @@ const ProjectBox = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
+    border-radius: 2px;
     top: 0px;
     right: 0px;
     bottom: 0px;
