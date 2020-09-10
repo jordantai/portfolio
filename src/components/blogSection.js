@@ -71,7 +71,15 @@ const BlogSection = () => {
 
   return (
     <>
-      <h2>Latest from the blog...</h2>
+      <h2
+        style={{
+          color: `white`,
+          textAlign: `center`,
+          paddingTop: `${rhythm(1)}`,
+        }}
+      >
+        Latest from the blog...
+      </h2>
       <AllPosts data={data} />
     </>
   )
