@@ -11,6 +11,7 @@ import { bgImgArray } from "../utils/background-images"
 import Work from "../components/work"
 import Skills from "../components/skills"
 import BlogSection from "../components/blogSection"
+import Contact from "../components/contact"
 
 class IndexPage extends React.Component {
   render() {
@@ -39,23 +40,25 @@ class IndexPage extends React.Component {
         <BlogWrapper>
           <BlogSection />
         </BlogWrapper>
+        <ContactWrapper>
+          <Contact />
+        </ContactWrapper>
       </Layout>
     )
   }
 }
 
-const IntroWrapper = styled.div`
+const IntroWrapper = styled.section`
   margin-left: auto;
   margin-right: auto;
   max-width: ${rhythm(24)};
   min-height: 100vh;
 `
 
-const WorkWrapper = styled.div`
+const WorkWrapper = styled.section`
   width: 100%;
   min-height: 200px;
   background-color: white;
-  padding-bottom: 1rem;
 `
 
 const SkillsWrapper = styled.section`
@@ -75,10 +78,12 @@ const SkillsWrapper = styled.section`
   }
 `
 
-const BlogWrapper = styled.section`
-  width: 100%;
-  min-height: 200px;
+const BlogWrapper = styled(WorkWrapper)`
   background-color: #34404d;
+`
+
+const ContactWrapper = styled(WorkWrapper)`
+  background-color: #709998;
 `
 
 export default IndexPage

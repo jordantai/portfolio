@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import styled, { keyframes } from "styled-components"
 import "../styles/global.css"
-// import img from "../../content/assets/bgImg/arches.jpg"
 import { rhythm, scale } from "../utils/typography"
 import { zoomInLeft } from "react-animations"
 
@@ -70,9 +69,8 @@ class Layout extends React.Component {
         </div>
         <main>{children}</main>
         <Footer>
-          © {new Date().getFullYear()}, Built with
+          © {new Date().getFullYear()} Jordan Craigen
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
         </Footer>
       </Wrapper>
     )
@@ -102,7 +100,7 @@ const Footer = styled.footer`
   width: 100%;
   text-align: center;
   margin: 0;
-  background-color: red;
+  background-color: #cad8e5;
 `
 
 export default Layout
