@@ -168,13 +168,15 @@ const StyledExternalLink = styled(ExternalLink)`
     margin-right: 5px;
   }
 `
+export const SectionTitle = styled.h2`
+  text-align: center;
+  padding-top: ${rhythm(1)};
+`
 
 const Work = () => {
   return (
     <>
-      <h2 id="work" style={{ textAlign: `center`, paddingTop: `${rhythm(1)}` }}>
-        Projects
-      </h2>
+      <SectionTitle id="work">Projects</SectionTitle>
       <ProjectsWrapper>
         <ProjectPortfolio>
           <ProjectInfoWrapper>
