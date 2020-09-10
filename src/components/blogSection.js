@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import styled from "styled-components"
 import { rhythm } from "../utils/typography"
+import Button from "./button"
 
 const BlogSection = () => {
   const data = useStaticQuery(graphql`
@@ -81,6 +82,19 @@ const BlogSection = () => {
         Latest from the blog...
       </h2>
       <AllPosts data={data} />
+      <div
+        style={{
+          display: `flex`,
+          justifyContent: `center`,
+          paddingBottom: `1rem`,
+        }}
+      >
+        <Link to="/blog/">
+          <Button background={`rgba(65, 158, 218, 1)`}>
+            See all blog posts
+          </Button>
+        </Link>
+      </div>
     </>
   )
 }
