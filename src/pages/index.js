@@ -57,7 +57,18 @@ const WorkWrapper = styled.div`
 const SkillsWrapper = styled.section`
   width: 100%;
   min-height: 200px;
-  background-color: lightcoral;
+  background-color: lightslategray;
+  h2,
+  h3 {
+    text-align: center;
+    color: #e5d99c;
+  }
+  h2 {
+    padding-top: ${rhythm(1)};
+  }
+  h3 {
+    padding-top: ${rhythm(1.5)};
+  }
 `
 
 export default IndexPage

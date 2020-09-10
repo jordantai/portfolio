@@ -24,12 +24,18 @@ const ListWrapper = styled.ul`
   list-style: none;
   display: flex;
   justify-content: space-evenly;
+  color: white;
   li {
     display: flex;
     align-items: center;
+    flex-direction: column;
     svg {
       margin-right: 0.3rem;
     }
+  }
+  @media (max-device-width: 600px) {
+    flex-direction: column;
+    margin: 0;
   }
 `
 
