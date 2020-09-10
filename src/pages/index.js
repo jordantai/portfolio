@@ -79,7 +79,6 @@ const BlogWrapper = styled.section`
   width: 100%;
   min-height: 200px;
   background-color: #34404d;
-  color: white;
 `
 
 export default IndexPage
