@@ -12,6 +12,7 @@ import Work from "../components/work"
 import Skills from "../components/skills"
 import BlogSection from "../components/blogSection"
 import Contact from "../components/contact"
+import Navbar from "../components/navbar"
 
 class IndexPage extends React.Component {
   render() {
@@ -23,10 +24,6 @@ class IndexPage extends React.Component {
           title="Home"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-
-        {/* <Link to="/blog/">
-          <Button marginTop="35px">Go to Blog</Button>
-        </Link> */}
         <IntroWrapper>
           <BackgroundSlider images={bgImgArray} duration={10} transition={2} />
           <Intro />
