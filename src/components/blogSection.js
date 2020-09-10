@@ -3,6 +3,7 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import styled from "styled-components"
 import { rhythm } from "../utils/typography"
 import Button from "./button"
+import { SectionTitle } from "./work"
 
 const BlogSection = () => {
   const data = useStaticQuery(graphql`
@@ -72,15 +73,13 @@ const BlogSection = () => {
 
   return (
     <>
-      <h2
+      <SectionTitle
         style={{
           color: `white`,
-          textAlign: `center`,
-          paddingTop: `${rhythm(1)}`,
         }}
       >
         Latest from the blog...
-      </h2>
+      </SectionTitle>
       <AllPosts data={data} />
       <div
         style={{

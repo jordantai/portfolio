@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { SectionTitle } from "./work"
 import {
   SiTypescript,
   SiJavascript,
@@ -43,7 +44,7 @@ const ListWrapper = styled.ul`
 const Skills = () => {
   return (
     <>
-      <h2 id="skills">Skills</h2>
+      <SectionTitle id="skills">Skills</SectionTitle>
       <h3>Languages</h3>
       <ListWrapper>
         <li>
