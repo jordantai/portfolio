@@ -18,7 +18,7 @@ const AnimatedHeader = styled.h2`
     props.right
       ? css`2s ${zoomInRightAnimation}`
       : css`2s ${zoomInLeftAnimation}`};
-  animation-delay: ${props => (props.right ? css`3s` : css`4s`)};
+  animation-delay: ${props => (props.right ? css`2s` : css`3s`)};
   background: rgba(255, 255, 255, 0.8);
   margin-bottom: ${rhythm(1)};
   width: 70%;
@@ -30,7 +30,7 @@ const AnimatedP = styled.p`
   animation: 2s ${zoomInUpAnimation};
   visibility: hidden;
   animation-fill-mode: forwards;
-  animation-delay: 5s;
+  animation-delay: 4s;
   @media (max-device-width: 768px) {
     margin: ${rhythm(0.3)};
   }
