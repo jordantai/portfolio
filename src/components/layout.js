@@ -4,6 +4,7 @@ import styled, { keyframes } from "styled-components"
 import "../styles/global.css"
 import { rhythm, scale } from "../utils/typography"
 import { zoomInLeft } from "react-animations"
+import Navbar from "../components/navbar"
 
 class Layout extends React.Component {
   render() {
@@ -57,6 +58,7 @@ class Layout extends React.Component {
     }
     return (
       <Wrapper>
+        <Navbar />
         <div
           style={{
             marginLeft: `auto`,
