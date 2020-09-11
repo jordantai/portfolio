@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 import styled from "styled-components"
 import crimeStatsImg from "../../content/assets/crime-stats-mcr.png"
 import chickenTinderImg from "../../content/assets/chicken-tinder.png"

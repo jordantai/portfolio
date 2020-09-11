@@ -1,10 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
-import { rhythm, scale } from "../utils/typography"
-import styled, { keyframes } from "styled-components"
+import { rhythm } from "../utils/typography"
+import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Button from "../components/button"
 import Intro from "../components/intro"
 import BackgroundSlider from "react-background-slider"
 import { bgImgArray } from "../utils/background-images"
@@ -12,7 +10,6 @@ import Work from "../components/work"
 import Skills from "../components/skills"
 import BlogSection from "../components/blogSection"
 import Contact from "../components/contact"
-import Navbar from "../components/navbar"
 
 class IndexPage extends React.Component {
   render() {

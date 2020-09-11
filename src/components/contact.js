@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { rhythm } from "../utils/typography"
 import { IoIosPerson } from "react-icons/io"
 import { FaEnvelope, FaMobileAlt, FaLinkedin, FaGithub } from "react-icons/fa"
 import { SectionTitle } from "./work"
