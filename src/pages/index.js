@@ -57,6 +57,7 @@ const WorkWrapper = styled.section`
   width: 100%;
   min-height: 200px;
   background-color: white;
+  padding-bottom: ${rhythm(1)};
 `
 
 const SkillsWrapper = styled.section`
