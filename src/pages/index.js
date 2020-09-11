@@ -16,10 +16,8 @@ import Navbar from "../components/navbar"
 
 class IndexPage extends React.Component {
   render() {
-    const siteTitle = "Hi, I'm Jordan"
-
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location}>
         <SEO
           title="Home"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
@@ -49,7 +47,10 @@ const IntroWrapper = styled.section`
   margin-left: auto;
   margin-right: auto;
   max-width: ${rhythm(24)};
-  min-height: 100vh;
+  height: 95vh;
+  @media (min-device-width: 1300px) {
+    margin-top: -20px;
+  }
 `
 
 const WorkWrapper = styled.section`

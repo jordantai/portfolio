@@ -59,16 +59,7 @@ class Layout extends React.Component {
     return (
       <Wrapper>
         <Navbar />
-        <div
-          style={{
-            marginLeft: `auto`,
-            marginRight: `auto`,
-            maxWidth: rhythm(24),
-            paddingTop: `${rhythm(1)}`,
-          }}
-        >
-          <MainHeader>{header}</MainHeader>
-        </div>
+        <MainHeader>{header}</MainHeader>
         <main>{children}</main>
         <Footer>
           © {new Date().getFullYear()} Jordan Craigen
@@ -79,9 +70,7 @@ class Layout extends React.Component {
   }
 }
 
-const Wrapper = styled.div`
-  min-height: 100vh;
-`
+const Wrapper = styled.div``
 
 const zoomInLeftAnimation = keyframes`${zoomInLeft} 0% {visibility: hidden} 100% {visibility: visible;}`
 

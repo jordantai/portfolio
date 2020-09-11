@@ -69,9 +69,25 @@ const WorkTitle = styled.h2`
   border-radius: 4rem;
 `
 
+const MainHeader = styled.h1`
+  background: rgba(255, 255, 255, 0.8);
+  width: 70%;
+  border-radius: 1rem 1rem 1rem 0;
+  text-align: center;
+  animation: 1s ${zoomInLeftAnimation};
+  visibility: hidden;
+  animation-fill-mode: forwards;
+  @media (max-device-width: 768px) {
+    margin-left: ${rhythm(0.7)};
+  }
+`
+
 const Intro = () => {
+  const title = "Hi, I'm Jordan"
+
   return (
     <>
+      <MainHeader style={{ ...scale(1.5) }}>{title}</MainHeader>
       <AnimatedHeader
         right
         style={{
