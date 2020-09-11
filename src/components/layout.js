@@ -18,7 +18,7 @@ class Layout extends React.Component {
       header = (
         <h1
           style={{
-            ...scale(1.5),
+            ...scale(1.2),
             marginTop: 0,
           }}
         >
@@ -37,9 +37,9 @@ class Layout extends React.Component {
     } else {
       // Article header
       header = (
-        <h3
+        <h1
           style={{
-            fontFamily: `Montserrat, sans-serif`,
+            ...scale(1.2),
             marginTop: 0,
           }}
         >
@@ -51,9 +51,9 @@ class Layout extends React.Component {
             }}
             to={`/blog/`}
           >
-            {title}
+            {title + " Blog"}
           </Link>
-        </h3>
+        </h1>
       )
     }
     return (
