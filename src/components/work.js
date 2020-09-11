@@ -139,6 +139,10 @@ const TechTitle = styled.h5`
   margin-bottom: ${rhythm(0.2)};
 `
 
+const ProjectDescription = styled(TechTitle)`
+  font-weight: 500;
+`
+
 const TechInfo = ({ className, children }) => (
   <div className={className}>{children}</div>
 )
@@ -186,6 +190,7 @@ const Work = () => {
             >
               <ProjectTitle>This Portfolio</ProjectTitle>
             </Link>
+            <ProjectDescription>My portfolio website</ProjectDescription>
             <TechTitle>Tech</TechTitle>
             <ProjectTech>
               <SiJavascript />
@@ -214,6 +219,9 @@ const Work = () => {
             >
               <ProjectTitle>Crime Stats MCR</ProjectTitle>
             </Link>
+            <ProjectDescription>
+              A data visualisation site using the Police API
+            </ProjectDescription>
             <TechTitle>Tech</TechTitle>
             <ProjectTech>
               <SiTypescript />
@@ -244,6 +252,10 @@ const Work = () => {
             >
               <ProjectTitle>Chicken Tinder</ProjectTitle>
             </Link>
+            <ProjectDescription>
+              An app to help you choose which restaurant to eat at (based on a
+              well known dating app).
+            </ProjectDescription>
             <TechTitle>Tech</TechTitle>
             <TechTitle>Front End</TechTitle>
             <ProjectTech>
@@ -282,6 +294,7 @@ const Work = () => {
             <Link to={`${blogPath}sman/`} style={{ textDecoration: `none` }}>
               <ProjectTitle>Super Mega Awesome News</ProjectTitle>
             </Link>
+            <ProjectDescription>A Reddit style news app</ProjectDescription>
             <TechTitle>Tech</TechTitle>
             <TechTitle>Front End</TechTitle>
             <ProjectTech>
@@ -321,6 +334,10 @@ const Work = () => {
             >
               <ProjectTitle>KM Ashworth Interiors</ProjectTitle>
             </Link>
+            <ProjectDescription>
+              A brochure type Wordpress website for a local fabrics and
+              interiors specialist
+            </ProjectDescription>
             <TechTitle>Tech</TechTitle>
             <ProjectTech>
               <SiWordpress />
@@ -349,6 +366,9 @@ const Work = () => {
             >
               <ProjectTitle>AS Upholstery</ProjectTitle>
             </Link>
+            <ProjectDescription>
+              A brochure type website for a local upholstery business
+            </ProjectDescription>
             <TechTitle>Tech</TechTitle>
             <ProjectTech>
               <SiWordpress />
