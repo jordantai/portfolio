@@ -74,13 +74,6 @@ module.exports = {
         name: `assets`,
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `backgrounds`,
-    //     path: `${__dirname}/content/assets/backgrounds`,
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {

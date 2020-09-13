@@ -1,8 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
-import styled from "styled-components"
 import BackgroundImages from "./backgroundImages"
+import styled, { keyframes } from "styled-components"
+import "../styles/global.css"
 import { rhythm, scale } from "../utils/typography"
+import { zoomInLeft } from "react-animations"
+import Navbar from "../components/navbar"
 
 class Layout extends React.Component {
   render() {
@@ -12,11 +15,11 @@ class Layout extends React.Component {
     let header
 
     if (location.pathname === rootPath || location.pathname === blogPath) {
+      // home and blog
       header = (
         <h1
           style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
+            ...scale(1.2),
             marginTop: 0,
           }}
         >
@@ -33,10 +36,11 @@ class Layout extends React.Component {
         </h1>
       )
     } else {
+      // Article header
       header = (
-        <h3
+        <h1
           style={{
-            fontFamily: `Montserrat, sans-serif`,
+            ...scale(1.2),
             marginTop: 0,
           }}
         >
@@ -48,46 +52,48 @@ class Layout extends React.Component {
             }}
             to={`/blog/`}
           >
-            {title}
+            {title + " Blog"}
           </Link>
-        </h3>
+        </h1>
       )
     }
     return (
       <Wrapper>
-        <BackgroundImages />
-        <div
-          style={{
-            marginLeft: `auto`,
-            marginRight: `auto`,
-            maxWidth: rhythm(24),
-            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-          }}
-        >
-          <MainHeader>{header}</MainHeader>
-          <main>{children}</main>
-        </div>
+        {/* <BackgroundImages /> */}
+        <Navbar />
+        <MainHeader>{header}</MainHeader>
+        <main>{children}</main>
         <Footer>
-          © {new Date().getFullYear()}, Built with
+          © {new Date().getFullYear()} Jordan Craigen
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
         </Footer>
       </Wrapper>
     )
   }
 }
 
-const Wrapper = styled.div`
-  min-height: 100vh;
-`
+const Wrapper = styled.div``
+
+const zoomInLeftAnimation = keyframes`${zoomInLeft} 0% {visibility: hidden} 100% {visibility: visible;}`
 
 const MainHeader = styled.h1`
   background: rgba(255, 255, 255, 0.8);
+  width: 70%;
+  border-radius: 1rem 1rem 1rem 0;
+  text-align: center;
+  animation: 1s ${zoomInLeftAnimation};
+  visibility: hidden;
+  animation-fill-mode: forwards;
+  @media (max-device-width: 768px) {
+    margin-left: ${rhythm(0.7)};
+  }
 `
 
 const Footer = styled.footer`
+  width: 100%;
   text-align: center;
-  margin: 24px;
+  margin: 0;
+  background-color: #cad8e5;
 `
 
 export default Layout
