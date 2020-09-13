@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import BackgroundImages from "./backgroundImages"
 import styled, { keyframes } from "styled-components"
 import "../styles/global.css"
 import { rhythm, scale } from "../utils/typography"
@@ -59,7 +58,6 @@ class Layout extends React.Component {
     }
     return (
       <Wrapper>
-        {/* <BackgroundImages /> */}
         <Navbar />
         <MainHeader>{header}</MainHeader>
         <main>{children}</main>
