@@ -18,7 +18,7 @@ const AnimatedHeader = styled.h2`
     props.right
       ? css`2s ${zoomInRightAnimation}`
       : css`2s ${zoomInLeftAnimation}`};
-  animation-delay: ${props => (props.right ? css`2s` : css`3s`)};
+  animation-delay: ${props => (props.right ? css`1s` : css`2s`)};
   background: rgba(255, 255, 255, 0.8);
   margin-bottom: ${rhythm(1)};
   width: 70%;
@@ -30,7 +30,7 @@ const AnimatedP = styled.p`
   animation: 2s ${zoomInUpAnimation};
   visibility: hidden;
   animation-fill-mode: forwards;
-  animation-delay: 4s;
+  animation-delay: 3s;
   @media (max-device-width: 768px) {
     margin: ${rhythm(0.3)};
   }
@@ -67,6 +67,10 @@ const WorkTitle = styled.h2`
   opacity: 0.8;
   padding: ${rhythm(0.5)};
   border-radius: 4rem;
+  &:hover {
+    background-color: #2a6496;
+    opacity: 1;
+  }
 `
 
 const MainHeader = styled.h1`
@@ -133,7 +137,9 @@ const Intro = () => {
         </StyledIconLink>
       </IconsWrapper>
       <WorkLinkWrapper>
-        <WorkTitle>My Work</WorkTitle>
+        <StyledIconLink url="#work">
+          <WorkTitle>My Work</WorkTitle>
+        </StyledIconLink>
         <StyledIconLink url="#work">
           <FaHandPointDown size={`3rem`} />
         </StyledIconLink>
