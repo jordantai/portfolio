@@ -21,8 +21,6 @@ const NavLinks = styled.ul`
     }
   }
 `
-
-const rootPath = `${__PATH_PREFIX__}/`
 const blogPath = `${__PATH_PREFIX__}/blog/`
 
 const Navbar = ({ location }) => {
