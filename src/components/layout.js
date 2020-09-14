@@ -58,7 +58,7 @@ class Layout extends React.Component {
     }
     return (
       <Wrapper>
-        <Navbar />
+        <Navbar location={location} />
         <MainHeader>{header}</MainHeader>
         <main>{children}</main>
         <Footer>

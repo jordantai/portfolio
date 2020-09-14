@@ -22,7 +22,12 @@ const NavLinks = styled.ul`
   }
 `
 
-const Navbar = () => {
+const rootPath = `${__PATH_PREFIX__}/`
+const blogPath = `${__PATH_PREFIX__}/blog/`
+
+const Navbar = ({ location }) => {
+  const page = location.pathname
+
   return (
     <nav>
       <NavLinks>
@@ -30,16 +35,16 @@ const Navbar = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="#work">Work</a>
+          <a href={page === blogPath ? "/#work" : "#work"}>Work</a>
         </li>
         <li>
-          <a href="#skills">Skills</a>
+          <a href={page === blogPath ? "/#skills" : "#skills"}>Skills</a>
         </li>
         <li>
           <Link to="/blog/">Blog</Link>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <a href={page === blogPath ? "/#contact" : "#contact"}>Contact</a>
         </li>
       </NavLinks>
     </nav>
