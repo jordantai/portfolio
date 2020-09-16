@@ -1,7 +1,7 @@
 ---
 path: portfolio
 date: 2020-09-11T21:32:13.027Z
-title: My Portfolio Site
+title: My Portfolio
 description: Made with Gatsby!
 ---
 Delighted to have updated my portfolio site and also use a bit of new tech in the form of Gatsby.
