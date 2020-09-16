@@ -185,7 +185,7 @@ const Work = () => {
         <ProjectPortfolio>
           <ProjectInfoWrapper>
             <Link
-              to={`${blogPath}portfolio/`}
+              to={`${blogPath}my-portfolio/`}
               style={{ textDecoration: `none` }}
             >
               <ProjectTitle>This Portfolio</ProjectTitle>
