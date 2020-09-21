@@ -4,12 +4,12 @@ import crimeStatsMacImg from "../../content/assets/crime-stats-mac.png"
 
 const FrameWrapper = styled.div`
   display: flex;
+  justify-content: space-evenly;
   align-items: flex-end;
 `
 const ImageFrame = styled.img`
   max-width: 15rem;
   background: none;
-  margin-right: 5px;
 `
 
 const PhoneImageFrame = styled(ImageFrame)`
@@ -26,4 +26,18 @@ const MacImageFrame = styled(ImageFrame)`
   background-position: 50% 20%;
 `
 
-export { FrameWrapper, MacImageFrame, PhoneImageFrame }
+const ListContainer = styled.ul`
+  list-style: none;
+  padding: 1rem;
+  border-radius: 2px;
+  align-items: center;
+  span {
+    font-weight: bold;
+  }
+  svg {
+    margin-right: 5px;
+    margin-bottom: -2px;
+  }
+`
+
+export { FrameWrapper, MacImageFrame, PhoneImageFrame, ListContainer }

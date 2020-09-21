@@ -9,30 +9,53 @@ import {
   FrameWrapper,
   MacImageFrame,
   PhoneImageFrame,
+  ListContainer,
 } from "styles/article-styles"
+import { SiGithub } from "react-icons/si"
+import { MdDevices } from "react-icons/md"
 import macFrame from "assets/mac-frame.png"
 import phoneFrame from "assets/phone-frame.png"
 
-## A front-end portfolio data visualisation project built with TypeScript and React
+## A front-end portfolio project built with TypeScript and React
 
 <FrameWrapper>
   <MacImageFrame src={macFrame} />
   <PhoneImageFrame src={phoneFrame} />
-  <ul>
-    <li>Project Type: Front-end</li>
-    <li>Tech: TypeScript, React, Node.js, Styled Components</li>
+  <ListContainer>
     <li>
-      Data: <a href="https://data.police.uk/">Police API</a>
+      <span>Project Type:</span> Front-end
     </li>
-    <li>Testing: Jest</li>
-  </ul>
+    <li>
+      <span>Tech:</span> TypeScript, React, Node.js, Styled Components
+    </li>
+    <li>
+      <span>Data:</span> <a href="https://data.police.uk/">Police API</a>
+    </li>
+    <li>
+      <span>Testing:</span> Jest
+    </li>
+  </ListContainer>
+  <ListContainer>
+    <li>
+      <a href="https://crime-stats-mcr.netlify.app/">
+        <MdDevices />
+        Live Site
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/jordantai/crime-stats">
+        <SiGithub />
+        Git repo
+      </a>
+    </li>
+  </ListContainer>
 </FrameWrapper>
 
 ### **Overview**
 
 The main reason for doing this project was to learn TypeScript and also refresh my React knowledge. I'd previosuly dabbled with the [Police API](https://data.police.uk/) during my full-stack developer bootcamp at [Northcoders](https://northcoders.com) and I wanted to present crime statitics for my local borough (Stockport) and the rest of the boroughs in Greater Manchester.
 
-Having watched TV shows such as Police Code Zero, Traffic Cops and Police Interceptors I'm generally always shocked at how little punishment arrested offenders get, especially considering the amount of time, effort, and often danger, the police go through to make arrests. Ultimately, I wanted to know how many incidents the police deal with on a monthly basis, what types of incident they deal with and what the outcomes are after these incidents are handled (i.e. was someone convicted, fined, etc ).
+Having watched TV shows such as Police Code Zero, Traffic Cops and Police Interceptors I'm generally always shocked at how little punishment arrested offenders get, especially considering the amount of time, effort, and often danger, the police go through to make arrests. Ultimately, I wanted to know how many incidents the police deal with on a monthly basis, what types of incident they deal with and what the outcomes are after these incidents are handled (i.e. number of convictions or fines).
 
 **This project was in no way aimed at criticising the Police.**
 
