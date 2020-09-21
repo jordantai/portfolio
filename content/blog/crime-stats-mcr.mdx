@@ -13,7 +13,63 @@ import {
 import macFrame from "assets/mac-frame.png"
 import phoneFrame from "assets/phone-frame.png"
 
+## A front-end portfolio data visualisation project built with TypeScript and React
+
 <FrameWrapper>
   <MacImageFrame src={macFrame} />
   <PhoneImageFrame src={phoneFrame} />
+  <ul>
+    <li>Project Type: Front-end</li>
+    <li>Tech: TypeScript, React, Node.js, Styled Components</li>
+    <li>
+      Data: <a href="https://data.police.uk/">Police API</a>
+    </li>
+    <li>Testing: Jest</li>
+  </ul>
 </FrameWrapper>
+
+### **Overview**
+
+The main reason for doing this project was to learn TypeScript and also refresh my React knowledge. I'd previosuly dabbled with the [Police API](https://data.police.uk/) during my full-stack developer bootcamp at [Northcoders](https://northcoders.com) and I wanted to present crime statitics for my local borough (Stockport) and the rest of the boroughs in Greater Manchester.
+
+Having watched TV shows such as Police Code Zero, Traffic Cops and Police Interceptors I'm generally always shocked at how little punishment arrested offenders get, especially considering the amount of time, effort, and often danger, the police go through to make arrests. Ultimately, I wanted to know how many incidents the police deal with on a monthly basis, what types of incident they deal with and what the outcomes are after these incidents are handled (i.e. was someone convicted, fined, etc ).
+
+**This project was in no way aimed at criticising the Police.**
+
+### **Tech Stack**
+
+This is pure front-end app built with TypeScript, node.js and React, and styled with Styled Components. Jest is used for testing various utility functions, mainly for data manipulation. I used Axios with node.js for HTTP requests to the Police data API.
+
+### **Findings**
+
+As you would expect, out of all the boroughs in Greater Manchester the city centre has the highest number of incidents each month. What is surprising is the number of incidents classed as **violent crime** as this type of crime was by far the highest in each borough every month.
+
+I also found it surprising just how few many incidents were investigated and resulted in **no suspect identified**. This outcome was by far the highest for each borough each month. Furthermore, incidents where the police were **unable to prosecute suspect** generally had the second highest proportion of outcomes.
+
+### **Project Challenges**
+
+#### **TypeScript**
+
+I knew learning TypeScript wasn't going to be easy as I'd never used a static typed language before. Although aspects of it were fairly easy to grasp, others were not, and it seems the linter is constantly shouting at you or underlining something 😩.
+
+Overall I think on a small project like this TypeScript is probably overkill, as the time taken to complete the project is longer and the code base is relatively small to debug (if necessary). However I can definitely see the benefits of using a Typed system on a larger scale app as it will surely prevent some errors and save time on debugging.
+
+#### **Data**
+
+Unfortunately the data from the police API was not provided in way that makes it easy to collate for the different locations I wanted. I also needed to manipulate the data in a certain way so it could be displayed in the donut charts too.
+
+To get the crime data for each borough I needed to make the API request with latitude and longitude pair co-ordinates which form the boundary of the borough, but there is a limit to the number of characters you can use in the request. This meant the co-ordinates I could obtain fairly easily from the [Open Street Maps API](https://www.openstreetmap.org/) could not be used as the data sets were huge. I therefore had to make my own co-ordinate data sets which, unfortunately, were not as locationaly accurate (as there were less co-ordinate pairs) as the Open Street Map data. This lowered the character count on the api request substantially and still gives an accurate boundary area from which to get the crime stats.
+
+### **The Future**
+
+I would like to add some more functionality to the app in the future, namely the following:
+
+<ul>
+  <li>A summary table of key stats for each borough and month</li>
+  <li>
+    The ability to see stats for a specific neighbourhood within a borough
+  </li>
+  <li>Being able to compare stats between different boroughs and months</li>
+</ul>
+
+**Thanks for reading**
