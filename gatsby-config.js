@@ -1,3 +1,5 @@
+const path = require("path")
+
 module.exports = {
   siteMetadata: {
     // edit below
@@ -59,7 +61,14 @@ module.exports = {
       },
     },
     `gatsby-plugin-feed-mdx`,
-    `gatsby-plugin-root-import`,
+    {
+      resolve: `gatsby-plugin-root-import`,
+      options: {
+        src: path.join(__dirname, "src"),
+        styles: path.join(__dirname, "src/styles"),
+        assets: path.join(__dirname, "content/assets"),
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
