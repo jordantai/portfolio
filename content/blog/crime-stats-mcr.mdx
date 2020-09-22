@@ -5,22 +5,15 @@ date: "2020-09-17"
 description: "A data visualisation app"
 ---
 
-import {
-  FrameWrapper,
-  MacImageFrame,
-  PhoneImageFrame,
-  ListContainer,
-} from "styles/article-styles"
+import { ListContainer, ArticleIntroLayout } from "styles/article-styles"
+import crimeStatsMacImg from "assets/crime-stats-mac.png"
+import crimeStatsMobileImg from "assets/crime-stats-mobile2.png"
 import { SiGithub } from "react-icons/si"
 import { MdDevices } from "react-icons/md"
-import macFrame from "assets/mac-frame.png"
-import phoneFrame from "assets/phone-frame.png"
 
 ## A front-end portfolio project built with TypeScript and React
 
-<FrameWrapper>
-  <MacImageFrame src={macFrame} />
-  <PhoneImageFrame src={phoneFrame} />
+<ArticleIntroLayout macBkg={crimeStatsMacImg} phoneBkg={crimeStatsMobileImg}>
   <ListContainer>
     <li>
       <span>Project Type:</span> Front-end
@@ -49,7 +42,7 @@ import phoneFrame from "assets/phone-frame.png"
       </a>
     </li>
   </ListContainer>
-</FrameWrapper>
+</ArticleIntroLayout>
 
 ### **Overview**
 

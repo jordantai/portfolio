@@ -1,6 +1,7 @@
+import React from "react"
 import styled from "styled-components"
-import crimeStatsMobileImg from "../../content/assets/crime-stats-mobile2.png"
-import crimeStatsMacImg from "../../content/assets/crime-stats-mac.png"
+import macFrame from "assets/mac-frame.png"
+import phoneFrame from "assets/phone-frame.png"
 
 const FrameWrapper = styled.div`
   display: flex;
@@ -14,13 +15,11 @@ const ImageFrame = styled.img`
 
 const PhoneImageFrame = styled(ImageFrame)`
   max-height: 5rem;
-  background-image: url(${crimeStatsMobileImg});
   background-size: contain;
   background-repeat: no-repeat;
 `
 
 const MacImageFrame = styled(ImageFrame)`
-  background-image: url(${crimeStatsMacImg});
   background-size: 98%;
   background-repeat: no-repeat;
   background-position: 50% 20%;
@@ -40,4 +39,20 @@ const ListContainer = styled.ul`
   }
 `
 
-export { FrameWrapper, MacImageFrame, PhoneImageFrame, ListContainer }
+const ArticleIntroLayout = ({ macBkg, phoneBkg, children }) => {
+  return (
+    <FrameWrapper>
+      <MacImageFrame
+        src={`${macFrame}`}
+        style={{ backgroundImage: `url(${macBkg})` }}
+      />
+      <PhoneImageFrame
+        src={`${phoneFrame}`}
+        style={{ backgroundImage: `url(${phoneBkg})` }}
+      />
+      {children}
+    </FrameWrapper>
+  )
+}
+
+export { ListContainer, ArticleIntroLayout }
