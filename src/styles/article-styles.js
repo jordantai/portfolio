@@ -57,10 +57,12 @@ const ArticleIntroLayout = ({ macBkg, phoneBkg, children }) => {
         <MacImageFrame
           src={`${macFrame}`}
           style={{ backgroundImage: `url(${macBkg})` }}
+          alt="Monitor screen with image of website displaying"
         />
         <PhoneImageFrame
           src={`${phoneFrame}`}
           style={{ backgroundImage: `url(${phoneBkg})` }}
+          alt="Phone screen with image of website displaying"
         />
       </ImgContainer>
       {children}
