@@ -7,7 +7,17 @@ const FrameWrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: flex-end;
+  @media (max-device-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `
+const ImgContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+`
+
 const ImageFrame = styled.img`
   max-width: 15rem;
   background: none;
@@ -27,6 +37,7 @@ const MacImageFrame = styled(ImageFrame)`
 
 const ListContainer = styled.ul`
   list-style: none;
+  margin: 0;
   padding: 1rem;
   border-radius: 2px;
   align-items: center;
@@ -42,14 +53,16 @@ const ListContainer = styled.ul`
 const ArticleIntroLayout = ({ macBkg, phoneBkg, children }) => {
   return (
     <FrameWrapper>
-      <MacImageFrame
-        src={`${macFrame}`}
-        style={{ backgroundImage: `url(${macBkg})` }}
-      />
-      <PhoneImageFrame
-        src={`${phoneFrame}`}
-        style={{ backgroundImage: `url(${phoneBkg})` }}
-      />
+      <ImgContainer>
+        <MacImageFrame
+          src={`${macFrame}`}
+          style={{ backgroundImage: `url(${macBkg})` }}
+        />
+        <PhoneImageFrame
+          src={`${phoneFrame}`}
+          style={{ backgroundImage: `url(${phoneBkg})` }}
+        />
+      </ImgContainer>
       {children}
     </FrameWrapper>
   )
