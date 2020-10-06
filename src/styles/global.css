@@ -2,6 +2,13 @@ a {
   text-decoration: none;
 }
 
+nav {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 5px;
+  z-index: 99;
+}
+
 /* Changes font size on smaller devices as typography.js offers no breakpoint changes to scale */
 @media only screen and (min-device-width: 200px) and (max-device-width: 480px) {
   html {
