@@ -11,6 +11,7 @@ import Work from "../components/work"
 import Skills from "../components/skills"
 import BlogSection from "../components/blogSection"
 import Contact from "../components/contact"
+require("smooth-scroll")('a[href*="#"')
 
 class IndexPage extends React.Component {
   render() {
