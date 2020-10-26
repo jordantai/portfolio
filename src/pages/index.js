@@ -4,14 +4,12 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Intro from "../components/intro"
-// import BackgroundSlider from "react-background-slider"
 import BackgroundImages from "../components/backgroundImages"
-// import { bgImgArray } from "../utils/background-images"
 import Work from "../components/work"
 import Skills from "../components/skills"
 import BlogSection from "../components/blogSection"
 import Contact from "../components/contact"
-//require("smooth-scroll")('a[href*="#"')
+//defines window to prevent webpack error during deploy build
 if (typeof window !== `undefined`) {
   require("smooth-scroll")('a[href*="#"');
 }
@@ -25,7 +23,6 @@ class IndexPage extends React.Component {
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <IntroWrapper>
-          {/* <BackgroundSlider images={bgImgArray} duration={10} transition={2} /> */}
           <BackgroundImages />
           <Intro />
         </IntroWrapper>
